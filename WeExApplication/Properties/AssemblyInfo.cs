@@ -8,10 +8,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("WeExApplication - Программа просмотра страниц в Интернет")]
 [assembly: AssemblyDescription("Программа просмотра страниц в Интернет")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Антонов Антон")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Программа просмотра страниц в Интернет")]
-[assembly: AssemblyCopyright("Антонов Антон ©  2018")]
-[assembly: AssemblyTrademark("Программа просмотра страниц в Интернет")]
+[assembly: AssemblyCopyright("Антонов Антон Владимирович ©  2018")]
+[assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Установка значения False для параметра ComVisible делает типы в этой сборке невидимыми
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("5786a0a1-2be6-454c-9a85-d0b9757f5b45")]
+[assembly: Guid("0d10cc3d-5a8d-4ab1-a03a-e3509dfd2bba")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //

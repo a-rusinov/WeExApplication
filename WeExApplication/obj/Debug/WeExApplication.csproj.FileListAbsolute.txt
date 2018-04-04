@@ -1,11 +1,11 @@
+C:\Users\antonov.anton\source\repos\WeExApplication\WeExApplication\bin\Debug\WeExApplication.exe.config
+C:\Users\antonov.anton\source\repos\WeExApplication\WeExApplication\bin\Debug\WeExApplication.exe
+C:\Users\antonov.anton\source\repos\WeExApplication\WeExApplication\bin\Debug\WeExApplication.pdb
 C:\Users\antonov.anton\source\repos\WeExApplication\WeExApplication\obj\Debug\WeExApplication.csprojResolveAssemblyReference.cache
 C:\Users\antonov.anton\source\repos\WeExApplication\WeExApplication\obj\Debug\WeExApplication.dlgAboutBox.resources
 C:\Users\antonov.anton\source\repos\WeExApplication\WeExApplication\obj\Debug\WeExApplication.frmMain.resources
 C:\Users\antonov.anton\source\repos\WeExApplication\WeExApplication\obj\Debug\WeExApplication.Properties.Resources.resources
 C:\Users\antonov.anton\source\repos\WeExApplication\WeExApplication\obj\Debug\WeExApplication.csproj.GenerateResource.cache
 C:\Users\antonov.anton\source\repos\WeExApplication\WeExApplication\obj\Debug\WeExApplication.csproj.CoreCompileInputs.cache
-C:\Users\antonov.anton\source\repos\WeExApplication\WeExApplication\bin\Debug\WeExApplication.exe.config
-C:\Users\antonov.anton\source\repos\WeExApplication\WeExApplication\bin\Debug\WeExApplication.exe
-C:\Users\antonov.anton\source\repos\WeExApplication\WeExApplication\bin\Debug\WeExApplication.pdb
 C:\Users\antonov.anton\source\repos\WeExApplication\WeExApplication\obj\Debug\WeExApplication.exe
 C:\Users\antonov.anton\source\repos\WeExApplication\WeExApplication\obj\Debug\WeExApplication.pdb

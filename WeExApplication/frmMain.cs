@@ -19,7 +19,59 @@ namespace WeExApplication
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            this.Text = "Программа просмотра страниц в Интернет" + webBrowser1.DocumentTitle;
+            this.Text = "Программа просмотра страниц в Интернет";
+        }
+
+        private void NewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMain fr = new frmMain();
+            fr.Show();
+        }
+
+        private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            webBrowser1.ShowSaveAsDialog();
+        }
+
+        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            webBrowser1.ShowSaveAsDialog();
+        }
+
+        private void PrintToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            webBrowser1.ShowPrintDialog();
+        }
+
+        private void PrintPreviewtoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            webBrowser1.ShowPrintPreviewDialog();
+        }
+
+        private void PageSetupToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            webBrowser1.ShowPageSetupDialog();
+        }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoBack();
+        }
+
+        private void NextToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoForward();
+        }
+
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dlgAboutBox dlg = new dlgAboutBox();
+            dlg.ShowDialog();
         }
 
         private void go_Click(object sender, EventArgs e)
@@ -52,44 +104,14 @@ namespace WeExApplication
             webBrowser1.GoHome();
         }
 
+        private void printButton_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Print();
+        }
+
         private void searchButton_Click(object sender, EventArgs e)
         {
             webBrowser1.GoSearch();
-        }
-
-        private void printButton_Click(object sender, EventArgs e)
-        {
-            webBrowser1.ShowPrintDialog();
-        }
-
-        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void PageSetupToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            webBrowser1.ShowPageSetupDialog();
-        }
-
-        private void PrintPreviewtoolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            webBrowser1.ShowPrintPreviewDialog();
-        }
-
-        private void PrintToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            webBrowser1.ShowPrintDialog();
-        }
-
-        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            webBrowser1.ShowSaveAsDialog();
-        }
-
-        private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            webBrowser1.ShowSaveAsDialog();
         }
 
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -120,29 +142,7 @@ namespace WeExApplication
             }
         }
 
-        private void NewToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmMain chf = new frmMain();
-            chf.Show();
-        }
-
-        private void BackToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            webBrowser1.GoBack();
-        }
-
-        private void NextToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            webBrowser1.GoForward();
-        }
-
-        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            dlgAboutBox dlA = new dlgAboutBox();
-            dlA.ShowDialog();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
             try
             {
