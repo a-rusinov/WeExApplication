@@ -18,60 +18,25 @@ namespace WeExApplication
         }
 
         private void frmMain_Load(object sender, EventArgs e)
-        {
-            this.Text = "Программа просмотра страниц в Интернет";
-        }
 
-        private void NewToolStripMenuItem_Click(object sender, EventArgs e)
+            
         {
-            frmMain fr = new frmMain();
-            fr.Show();
-        }
+            // Main Form Parametrs
 
-        private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            webBrowser1.ShowSaveAsDialog();
-        }
+            this.AcceptButton = go;
+            this.CancelButton = CancelButton;
+            this.Text = Properties.Settings.Default.AppName; 
+            this.ForeColor = Properties.Settings.Default.FormColor;
+            this.BackColor = Properties.Settings.Default.FormColor;
 
-        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            webBrowser1.ShowSaveAsDialog();
-        }
 
-        private void PrintToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            webBrowser1.ShowPrintDialog();
-        }
 
-        private void PrintPreviewtoolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            webBrowser1.ShowPrintPreviewDialog();
-        }
 
-        private void PageSetupToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            webBrowser1.ShowPageSetupDialog();
-        }
+            // Sittings
+            Properties.Settings.Default.HomePage = "https://yandex.ru"; // Home Page
+            Properties.Settings.Default.FindPage = "https://google.ru"; //Find Page
 
-        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void BackToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            webBrowser1.GoBack();
-        }
-
-        private void NextToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            webBrowser1.GoForward();
-        }
-
-        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            dlgAboutBox dlg = new dlgAboutBox();
-            dlg.ShowDialog();
+           
         }
 
         private void go_Click(object sender, EventArgs e)
@@ -101,17 +66,47 @@ namespace WeExApplication
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            webBrowser1.GoHome();
-        }
-
-        private void printButton_Click(object sender, EventArgs e)
-        {
-            webBrowser1.Print();
+            webBrowser1.Navigate(Properties.Settings.Default.HomePage);
         }
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            webBrowser1.GoSearch();
+            webBrowser1.Navigate(Properties.Settings.Default.FindPage);
+        }
+
+        private void printButton_Click(object sender, EventArgs e)
+        {
+            webBrowser1.ShowPrintDialog();
+        }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void PageSetupToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            webBrowser1.ShowPageSetupDialog();
+        }
+
+        private void PrintPreviewtoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            webBrowser1.ShowPrintPreviewDialog();
+        }
+
+        private void PrintToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            webBrowser1.ShowPrintDialog();
+        }
+
+        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            webBrowser1.ShowSaveAsDialog();
+        }
+
+        private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            webBrowser1.ShowSaveAsDialog();
         }
 
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -142,11 +137,33 @@ namespace WeExApplication
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void NewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMain chf = new frmMain();
+            chf.Show();
+        }
+
+        private void BackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoBack();
+        }
+
+        private void NextToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoForward();
+        }
+
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dlgAboutBox dlA = new dlgAboutBox();
+            dlA.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
         {
             try
             {
-                // t// генерируем работу часов с отображением в Label1
+                // генерируем работу часов с отображением в Label1
                 timer1.Enabled = true;
                 timer1.Interval = 1000;
                 label1.Text = DateTime.Now.ToLongTimeString();
@@ -155,6 +172,12 @@ namespace WeExApplication
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void опцииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSettings frmSettings = new frmSettings();
+            frmSettings.ShowDialog();
         }
     }
 }
